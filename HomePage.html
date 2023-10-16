@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
-    
     <!-- from bootstrap intro -->
     <link
       rel="stylesheet"
@@ -11,16 +14,63 @@
       crossorigin="anonymous"
     />
     <style>
-      
-    </style>
-  </head>
+        .footer {
+            background-color: #f8f9fa;
+            color: #212529;
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+        }
 
-<!-- from bootstrap intro: Responsive meta tag -->
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-/>
-  
+        .footer h5 {
+            margin-bottom: 15px;
+        }
+
+        .footer .newsletter form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer .newsletter input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .footer .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer .button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer .social-media p {
+            margin-bottom: 10px;
+        }
+
+        .footer .social-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-right: 5px;
+        }
+
+        .footer .social-btn img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+
 <!-- navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="HomePage.html">
@@ -52,7 +102,7 @@
     </div>
   </div>
 </nav>
-  
+
 <!-- from bootstrap intro: bundle -->
 <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -121,64 +171,101 @@
     </div>
   </div>
 
-  <!--Footer-->
+
+<!-- Existing HTML above remains unchanged -->
+
+<!-- Footer -->
+<div class="footer">
   <div class="container">
-    <footer class="py-5">
       <div class="row">
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <!--<label for="newsletter1" class="visually-hidden">Email address</label>-->
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="button">Subscribe</button>
-            </div>
-          </form>
-        </div>
+          <!-- Location Section -->
+          <div class="col-md-6"> <!-- Updated from col-md-4 to col-md-6 -->
+              <h5>Our Locations</h5>
+              
+              <!-- Location 1 -->
+              <div class="location">
+                  <div class="row">
+                      <!-- Address -->
+                      <div class="col-md-4">
+                          <p>1230 Oakland St Unit 4</p>
+                          <p>San Jose, California 95122</p>
+                      </div>
+                      
+                      <!-- Google Maps Embed -->
+                      <div class="col-md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.626288030525!2d-121.85873648468077!3d37.354107979838225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9c2f4c32601%3A0x4a6f917f0b3323e6!2s1230%20Oakland%20Rd%20UNIT%204%2C%20San%20Jose%2C%20CA%2095122%2C%20USA!5e0!3m2!1sen!2s!4v1634259135964!5m2!1sen!2s" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      </div>
+                      
+                      <!-- Store Hours -->
+                      <div class="col-md-4">
+                          <ul class="store-hours">
+                                                    <li>Monday: 11AM - 10PM</li>
+                      <li>Tuesday: 11AM - 10PM</li>
+                      <li>Wednesday: 11AM - 10PM</li>
+                      <li>Thursday: 11AM - 10PM</li>
+                      <li>Friday: 11AM - 10PM</li>
+                      <li>Saturday: 11AM - 10PM</li>
+                      <li>Sunday: 11AM - 10PM</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Location 2 -->
+              <div class="location">
+                  <div class="row">
+                      <!-- Address -->
+                      <div class="col-md-4">
+                        <p>1 Washington Sq</p>
+                        <p>San Jose, California 95192</p>
+                      </div>
+                      
+                      <!-- Google Maps Embed -->
+                      <div class="col-md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3092220883855!2d-121.88364642413693!3d37.33518737209941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccb864de43d5%3A0x397ffe721937340e!2sSan%20Jos%C3%A9%20State%20University!5e0!3m2!1sen!2sus!4v1697434102022!5m2!1sen!2sus" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      </div>
+                      
+                      <!-- Store Hours -->
+                      <div class="col-md-4">
+                          <ul class="store-hours">
+                            <li>Monday: 11AM - 10PM</li>
+                            <li>Tuesday: 11AM - 10PM</li>
+                            <li>Wednesday: 11AM - 10PM</li>
+                            <li>Thursday: 11AM - 10PM</li>
+                            <li>Friday: 11AM - 10PM</li>
+                            <li>Saturday: 11AM - 10PM</li>
+                            <li>Sunday: 11AM - 10PM</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Newsletter and Social Media -->
+          <div class="col-md-6"> <!-- Updated from col-md-4 to col-md-6 -->
+              <div class="newsletter">
+                  <h5>Stay updated and join our mailing list!</h5>
+                  <form>
+                      <input type="text" placeholder="Email address" required>
+                      <button type="submit" class="button">Join Now!</button>
+                  </form>
+              </div>
+              <div class="social-media">
+                  <p>Follow us!</p>
+                  <button class="social-btn" onclick="window.location.href='https://www.instagram.com';">
+                      <img src="instagram.png" alt="Instagram" />
+                  </button>
+                  <button class="social-btn" onclick="window.location.href='https://www.twitter.com';">
+                      <img src="twitter.png" alt="Twitter" />
+                  </button>
+                  <button class="social-btn" onclick="window.location.href='https://www.facebook.com';">
+                      <img src="facebook.png" alt="Facebook" />
+                  </button>
+              </div>
+          </div>
       </div>
-  
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </div>
-    </footer>
   </div>
+</div>
+
 </body>
+</html>
