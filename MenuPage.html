@@ -66,7 +66,7 @@
 </script>
 
 <body>
-    <div class="container">
+    <div class="grid-container">
         <div class="row">
             <br>
             <br>
@@ -111,32 +111,19 @@
           <div class="row">
             <div class = "col">
               <p class="text-center">Pizza Bite</p>
-              .menu-box {
-    width: 300px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
             </div>
             <div class = "col">
               <p class="text-center">Breadstick</p>
             </div>
           </div>
-
-      
-.menu-box {
-    width: 300px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
+ display: grid;
+      grid-template-columns: auto auto auto;
+      div{
+        text-align: center;
+        background: white;
+        border: 3px grey;
+        padding: 20px;
+      }
 
       
       </div>
