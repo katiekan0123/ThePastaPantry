@@ -1,122 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <link rel="stylesheet" href="/style.css" />
-    
+
     <!-- from bootstrap intro -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+        crossorigin="anonymous"
     />
     <style>
-      
+        /* Add animation to the title (same as home page) */
+        @keyframes pulse {
+            0% { color: #007bff; }
+            50% { color: #ff5733; }
+            100% { color: #007bff; }
+        }
+
+        title {
+            animation: pulse 3s infinite;
+        }
+
+        /* Hover effect for navigation links (same as home page) */
+        .navbar-nav a:hover {
+            background-color: #ff5733; /* Change the background color to pink on hover */
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Animated header background (same as home page) */
+        header {
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: changeBackground 10s infinite;
+        }
+
+        @keyframes changeBackground {
+            0% { background-image: url('header-bg1.jpg'); }
+            50% { background-image: url('header-bg2.jpg'); }
+            100% { background-image: url('header-bg1.jpg'); }
+        }
+
+        /* Additional styles for menu items */
+        .menu-item {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .menu-item h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
     </style>
-  </head>
+</head>
 
 <!-- from bootstrap intro: Responsive meta tag -->
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
-  
+
 <!-- navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="HomePage.html">
-    <img
-      src="Logo.JPG"
-      width="100"
-      height="100"
-      alt="Pasta Pantry Logo"
-      loading="lazy"
-    />
-  </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link" href="HomePage.html">Home</a>
-      <a class="nav-link" href="MenuPage.html">Menu</a>
-      <a class="nav-link" href="#reservations">Reservations</a>
-      <a class="nav-link" href="#aboutus">About Us</a>
+    <a class="navbar-brand" href="HomePage.html">
+        <img
+            src="Logo.JPG"
+            width="100"
+            height="100"
+            alt="Pasta Pantry Logo"
+            loading="lazy"
+        />
+    </a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link" href="HomePage.html">Home</a>
+            <a class="nav-link" href="MenuPage.html">Menu</a>
+            <a class="nav-link" href="Reservations.html">Reservations</a>
+            <a class="nav-link" href="aboutus.html">About Us</a>
+        </div>
     </div>
-  </div>
 </nav>
-  
+
 <!-- from bootstrap intro: bundle -->
 <script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous">
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous">
 </script>
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-  crossorigin="anonymous">
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous">
 </script>
 
 <body>
-  <div class="container">
-        <div class="row">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+<div class="container">
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <p><h1>Appetizers</h1></p>
+    <div class="row">
+        <br>
+    </div>
+    <div class="row">
+        <div class="col menu-item">
+            <img src="calamari.webp" alt="Fried Calamari">
+            <h3>Calamari</h3>
         </div>
-        <br>
-        <br>
-    <p><h1>Appertizers</h1></p>
-          <div class="row">
-            <br>
-          </div>
-          <div class="row">
-            <div class = "col">
-              <img src="calamari.webp" alt="Fried Calamari" width="500">
-            </div>
-            <div class = "col">
-              <img src="Mozarella Stick.webp" alt="Mozarella Sticks" width="500">
-            </div>
-          </div>
-          <div class="row">
-            <div class = "col">
-              <p class="text-center">Calarami</p>
-            </div>
-            <div class = "col">
-              <p class="text-center">Mozarella Sticks</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class = "col">
-              <img src="Pizza Bite.jpeg" alt="Pizza Bite" width="500">
-            </div>
-            <div class = "col">
-              <img src="Breadstick.jpeg" alt="Breadstick" width="500">
-            </div>
-          </div>
-          <div class="row">
-            <div class = "col">
-              <p class="text-center">Pizza Bite</p>
-            </div>
-            <div class = "col">
-              <p class="text-center">Breadstick</p>
-            </div>
-          </div>
-
-
-      
-      </div>
--->
-
-      
-</body>
+        <div class="col menu-item">
+            <img src="Mozarella Stick.webp" alt="Mozarella Sticks">
+            <h3>Mozarella Sticks</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col menu-item">
+            <img src="Pizza Bite.jpeg" alt="Pizza Bites">
+            <h3>Pizza Bite</h3>
+        </div>
+        <div class="col menu-item">
+            <img src="Bread
