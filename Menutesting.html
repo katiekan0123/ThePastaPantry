@@ -1,59 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menutesting 2</title>
-    <style>
-        .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5em;
-    
-}
-
-.menu{
-    font-family: sans-serif;
-    font-size: 14px;
-
-}
-
-.menu-group-heading{
-    margin: 0;
-    padding-bottom: 1em;
-    border-bottom: 2px solid #ccc;
-}
-
-.menu-group{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5em;
-    padding: 1.5em 0;
-}
-
-@media screen and (min-width: 992px) {
-    .menu {
-        font-size: 16px;
-    }
-
-    .menu-group {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <div class="menu">
-            <h2 class="menu-group-heading">
-                Appetizer
-            </h2>
-            <div class="menu-group">
-                <div>one</div>
-                <div>two</div>
-                <div>three</div>
-            </div>
+  <div class="container">
+    <div class="menu">
+        <!--Appetizer-->
+      <h2 class="menu-group-heading">
+        Appetizers
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="calamari copy.webp" alt="Fried Calamari">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Calamari</span>
+              <span class="menu-item-price">$9.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>  
+          </div>         
         </div>
+        
+        <div class="menu-item">
+          <img class="menu-item-image" src="Mozarella Stick.webp" alt="Mozarella Sticks">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Mozarella Sticks</span>
+              <span class="menu-item-price">$8.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>  
+          </div>
+        </div>
+
+        <div class="menu-item">
+            <img class="menu-item-image" src="Pizza Bite.jpeg" alt="Pizza Bites">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Pizza Bites</span>
+                <span class="menu-item-price">$9.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>  
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <img class="menu-item-image" src="Breadstick.jpeg" alt="Breadsticks">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Breadsticks</span>
+                <span class="menu-item-price">$7.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>  
+            </div>
+          </div>
+      </div>
+
+      <!--Entree-->
+      <h2 class="menu-group-heading">
+        Entrées
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="Pasta2 copy.webp" alt="Meatball Marinara">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Meatball Marinara</span>
+              <span class="menu-item-price">$14.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img class="menu-item-image" src="Pasta3 copy.jpeg" alt="Shrimp Scampi Delight">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Shrimp Scampi Delight</span>
+              <span class="menu-item-price">$14.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+            <img class="menu-item-image" src="chickenalfredo.jpeg" alt="Chicken Fettuccine Alfredo">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Chicken Fettuccine Alfredo</span>
+                <span class="menu-item-price">$13.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <img class="menu-item-image" src="penne.jpeg" alt="Penne Alla Pomodoro">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Penne Alla Pomodoro</span>
+                <span class="menu-item-price">$14.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <!--Dessert-->
+      <h2 class="menu-group-heading">
+        Desserts
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="tiramisu.jpeg" alt="Classic Italian Tiramisu">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Classic Italian Tiramisu</span>
+              <span class="menu-item-price">$7.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img class="menu-item-image" src="orangecake.jpeg" alt="Tangy Citrus Chocolate Delight">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Tangy Citrus Chocolate Delight</span>
+              <span class="menu-item-price">$6.99</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div class="menu-item-buttons">
+                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="add-to-order-button">Add to Order</button>
+              </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+            <img class="menu-item-image" src="fondue.jpeg" alt="Fondue Fiesta">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Fondue Fiesta</span>
+                <span class="menu-item-price">$9.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <img class="menu-item-image" src="limecheesecake.jpeg" alt="Lime Cheesecake">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name">Lime Cheesecake</span>
+                <span class="menu-item-price">$6.99</span>
+              </h3>
+              <p class="menu-item-description">
+                Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+                congue eu mauris nec, pretium tincidunt nulla.
+              </p>
+              <div class="menu-item-buttons">
+                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="add-to-order-button">Add to Order</button>
+                </div>
+            </div>
+          </div>
+      </div>
+
     </div>
+  </div>
+  <link rel="stylesheet" type="text/css" href="menutesting2STYLEs.css">
 </body>
+
 </html>
