@@ -15,6 +15,7 @@
     padding-bottom: 0.5em;
     border-bottom: 2px solid #4f2600;
     font-size: 35px;
+    font-weight: bolder;
   }
   
   .menu-group {
@@ -31,8 +32,8 @@
   }
   
   .menu-item-image {
-    width: 200x;
-    height: 200px;
+    width: 300x;
+    height: 300px;
     flex-shrink: 0;
     object-fit: cover;
     margin-right: 1.5em;
@@ -45,16 +46,24 @@
   .menu-item-heading {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin-top: 0;
+    font-weight: bold;
   }
   
+  .menu-item-price {
+    font-size: 22px;
+    margin-top: 0;
+  }
+
   .menu-item-name {
     margin-right: 1.5em;
-    font: bold;
+    font-size: 22px;
+    margin-top: 0;
   }
   
   .menu-item-description {
     line-height: 1.6;
+    text-align: left;
   }
   
 
@@ -62,11 +71,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    justify-content: end, space-between;
   }
   
   .view-nutrition-button,
   .add-to-order-button {
-    padding: 10px 20px;
+    padding: 8px 15px;
     background-color: #4f2600;
     color: #fff;
     border: none;
