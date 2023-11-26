@@ -60,6 +60,29 @@
             font-size: 18px;
             margin-top: 10px;
         }
+
+        .nutritional-info-popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          z-index: 1
+        }
+
+        #bg-overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 
@@ -122,10 +145,17 @@
       <br>
       <br>
       <br>
+        <!--Darkened background for nutritional info-->
+      <div id="bg-overlay"></div>
+
         <!--Appetizer-->
       <h2 class="menu-group-heading">
         Appetizers
       </h2>
+      
+
+
+        <!--Calamari-->
       <div class="menu-group">
         <div class="menu-item">
           <img class="menu-item-image" src="calamari.webp" alt="Fried Calamari">
@@ -140,17 +170,40 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id = "calamari-nutrition" onclick = "showCalamariPopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>  
           </div>         
         </div>
-        
+
+        <div class = "nutritional-info-popup" id = "calamari-popup">
+          <h3>Calamari: Nutritional Info</h3>
+          <p>Calories: 356g</p>
+          <p>Total Fats: 15g</p>
+          <p>Cholesterol: 192mg</p>
+          <p>Sugar: 0.1g</p>
+          <p>Protein: 18g</p>
+          <button onclick = "hideCalamariPopup()">Close</button>
+        </div>
+
+        <script>
+          function showCalamariPopup() {
+            document.getElementById('calamari-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+
+          function hideCalamariPopup() {
+            document.getElementById('calamari-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
+
+        <!--Mozzarella Sticks-->
         <div class="menu-item">
           <img class="menu-item-image" src="Mozarella Stick.webp" alt="Mozarella Sticks">
           <div class="menu-item-text">
             <h3 class="menu-item-heading">
-              <span class="menu-item-name">Mozarella Sticks</span>
+              <span class="menu-item-name">Mozzarella Sticks</span>
               <span class="menu-item-price">$8.99</span>
             </h3>
             <p class="menu-item-description">
@@ -159,12 +212,36 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id = "mozzarella-nutrition" onclick = "showMozzarellaPopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>  
           </div>
         </div>
 
+        <div class = "nutritional-info-popup" id = "mozzarella-popup">
+          <h3>Mozzarella Sticks: Nutritional Info (Per Stick)</h3>
+          <p>Calories: 300g</p>
+          <p>Total Fats: 15g</p>
+          <p>Cholesterol: 3mg</p>
+          <p>Sugar: 25g</p>
+          <p>Protein: 15g</p>
+          <button onclick = "hideMozzarellaPopup()">Close</button>
+        </div>
+
+        <script>
+          function showMozzarellaPopup() {
+            document.getElementById('mozzarella-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+
+          function hideMozzarellaPopup() {
+            document.getElementById('mozzarella-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
+
+
+        <!--Pizza bites-->
         <div class="menu-item">
             <img class="menu-item-image" src="Pizza Bite.jpeg" alt="Pizza Bites">
             <div class="menu-item-text">
@@ -178,12 +255,36 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id="pizzabite-nutrition" onclick="showPizzaBitePopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>  
             </div>
           </div>
 
+        <div class = "nutritional-info-popup" id = "pizzabite-popup">
+          <h3>Pizza Bites: Nutritional Info (6 per serving)</h3>
+          <p>Calories: 264g</p>
+          <p>Total Fats: 7.8g</p>
+          <p>Cholesterol: 4.8mg</p>
+          <p>Sugar: 3g</p>
+          <p>Protein: 7.2g</p>
+          <button onclick = "hidePizzaBitePopup()">Close</button>
+        </div>
+
+        <script>
+          function showPizzaBitePopup() {
+            document.getElementById('pizzabite-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+
+          function hidePizzaBitePopup() {
+            document.getElementById('pizzabite-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
+
+
+        <!--Breadstick-->
           <div class="menu-item">
             <img class="menu-item-image" src="Breadstick.jpeg" alt="Breadsticks">
             <div class="menu-item-text">
@@ -197,17 +298,41 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id = "breadstick-nutrition" onclick = "showBreadstickPopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>  
             </div>
           </div>
       </div>
 
+      <div class = "nutritional-info-popup" id = "breadstick-popup">
+        <h3>Breadsticks: Nutritional Info (5 per serving)</h3>
+        <p>Calories: 125g</p>
+        <p>Total Fats: 2.8g</p>
+        <p>Cholesterol: 0mg</p>
+        <p>Sugar: 0.4g</p>
+        <p>Protein: 3.6g</p>
+        <button onclick = "hideBreadstickPopup()">Close</button>
+      </div>
+
+      <script>
+        function showBreadstickPopup() {
+          document.getElementById('breadstick-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hideBreadstickPopup() {
+          document.getElementById('breadstick-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
       <!--Entree-->
       <h2 class="menu-group-heading">
         Entrées
       </h2>
+
+      <!--Meatball Marinara-->
       <div class="menu-group">
         <div class="menu-item">
           <img class="menu-item-image" src="pasta2.jpg" alt="Meatball Marinara">
@@ -222,12 +347,35 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id="meatball-nutrition" onclick="showMeatballPopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>
           </div>
         </div>
 
+      <div class = "nutritional-info-popup" id = "meatball-popup">
+        <h3>Meatball Marinara: Nutritional Info</h3>
+        <p>Calories: 786g</p>
+        <p>Total Fats: 30g</p>
+        <p>Cholesterol: 76mg</p>
+        <p>Sugar: 11.6g</p>
+        <p>Protein: 32g</p>
+        <button onclick = "hideMeatballPopup()">Close</button>
+      </div>
+
+      <script>
+        function showMeatballPopup() {
+          document.getElementById('meatball-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hideMeatballPopup() {
+          document.getElementById('meatball-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
+      <!--Shrimp Scampi Delight-->
         <div class="menu-item">
           <img class="menu-item-image" src="Pasta3.jpeg" alt="Shrimp Scampi Delight">
           <div class="menu-item-text">
@@ -241,12 +389,35 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id="shrimpscampi-nutrition" onclick="showShrimpScampiPopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>
           </div>
         </div>
 
+      <div class = "nutritional-info-popup" id = "shrimpscampi-popup">
+        <h3>Shrimp Scampi Delight: Nutritional Info</h3>
+        <p>Calories: 478g</p>
+        <p>Total Fats: 24g</p>
+        <p>Cholesterol: 466mg</p>
+        <p>Sugar: 3g</p>
+        <p>Protein: 46g</p>
+        <button onclick = "hideShrimpScampiPopup()">Close</button>
+      </div>
+
+      <script>
+        function showShrimpScampiPopup() {
+          document.getElementById('shrimpscampi-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hideShrimpScampiPopup() {
+          document.getElementById('shrimpscampi-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
+      <!--Chicken Fettuccine Alfredo-->
         <div class="menu-item">
             <img class="menu-item-image" src="chickenalfredo.jpeg" alt="Chicken Fettuccine Alfredo">
             <div class="menu-item-text">
@@ -260,12 +431,35 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id="chickenalfredo-nutrition" onclick="showChickenAlfredoPopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>
             </div>
           </div>
 
+      <div class = "nutritional-info-popup" id = "chickenalfredo-popup">
+        <h3>Chicken Fettccine Alfredo: Nutritional Info</h3>
+        <p>Calories: 1191g</p>
+        <p>Total Fats: 81g</p>
+        <p>Cholesterol: 282mg</p>
+        <p>Sugar: 4.7g</p>
+        <p>Protein: 46g</p>
+        <button onclick = "hideChickenAlfredoPopup()">Close</button>
+      </div>
+
+      <script>
+        function showChickenAlfredoPopup() {
+          document.getElementById('chickenalfredo-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hideChickenAlfredoPopup() {
+          document.getElementById('chickenalfredo-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
+      <!--Penne Alla Pomodoro-->
           <div class="menu-item">
             <img class="menu-item-image" src="penne.jpeg" alt="Penne Alla Pomodoro">
             <div class="menu-item-text">
@@ -279,17 +473,41 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id="penne-nutrition" onclick="showPennePopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>
             </div>
           </div>
       </div>
 
+      <div class = "nutritional-info-popup" id = "penne-popup">
+        <h3>Penne Alla Pomodoro: Nutritional Info</h3>
+        <p>Calories: 636g</p>
+        <p>Total Fats: 24g</p>
+        <p>Cholesterol: 22mg</p>
+        <p>Sugar: 13.4g</p>
+        <p>Protein: 18.4g</p>
+        <button onclick = "hidePennePopup()">Close</button>
+      </div>
+
+      <script>
+        function showPennePopup() {
+          document.getElementById('penne-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hidePennePopup() {
+          document.getElementById('penne-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
       <!--Dessert-->
       <h2 class="menu-group-heading">
         Desserts
       </h2>
+
+      <!--Tiramisu-->
       <div class="menu-group">
         <div class="menu-item">
           <img class="menu-item-image" src="tiramisu.jpeg" alt="Classic Italian Tiramisu">
@@ -304,12 +522,36 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id="tiramisu-nutrition" onclick="showTiramisuPopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>
           </div>
         </div>
 
+        
+      <div class = "nutritional-info-popup" id = "tiramisu-popup">
+        <h3>Classic Italian Tiramisu: Nutritional Info</h3>
+        <p>Calories: 392g</p>
+        <p>Total Fats: 30g</p>
+        <p>Cholesterol: 210mg</p>
+        <p>Sugar: 14g</p>
+        <p>Protein: 5.7g</p>
+        <button onclick = "hideTiramisuPopup()">Close</button>
+      </div>
+
+      <script>
+        function showTiramisuPopup() {
+          document.getElementById('tiramisu-popup').style.display = 'block';
+          document.getElementById('bg-overlay').style.display = 'block';
+        }
+
+        function hideTiramisuPopup() {
+          document.getElementById('tiramisu-popup').style.display = 'none';
+          document.getElementById('bg-overlay').style.display = 'none';
+        }
+      </script>
+
+      <!--Orange Cake-->
         <div class="menu-item">
           <img class="menu-item-image" src="orangecake.jpeg" alt="Tangy Citrus Chocolate Delight">
           <div class="menu-item-text">
@@ -323,12 +565,35 @@
             </p>
             <br>
             <div class="menu-item-buttons">
-                <button class="view-nutrition-button">Nutritional Information</button>
+                <button class="view-nutrition-button" id="orangecake-nutrition" onclick="showOrangeCakePopup()">Nutritional Information</button>
                 <button class="add-to-order-button">Add to Order</button>
               </div>
           </div>
         </div>
 
+        <div class = "nutritional-info-popup" id = "orangecake-popup">
+          <h3>Tangy Citrus Chocolate Delight: Nutritional Info</h3>
+          <p>Calories: 414g</p>
+          <p>Total Fats: 18g</p>
+          <p>Cholesterol: 54mg</p>
+          <p>Sugar: 47g</p>
+          <p>Protein: 3.3g</p>
+          <button onclick = "hideOrangeCakePopup()">Close</button>
+        </div>
+  
+        <script>
+          function showOrangeCakePopup() {
+            document.getElementById('orangecake-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+  
+          function hideOrangeCakePopup() {
+            document.getElementById('orangecake-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
+
+      <!--Fondue-->
         <div class="menu-item">
             <img class="menu-item-image" src="fondue.jpeg" alt="Fondue Fiesta">
             <div class="menu-item-text">
@@ -342,12 +607,35 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id="fondue-nutrition" onclick="showFonduePopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>
             </div>
           </div>
 
+        <div class = "nutritional-info-popup" id = "fondue-popup">
+          <h3>Fondue Fiesta: Nutritional Info</h3>
+          <p>Calories: 480g</p>
+          <p>Total Fats: 26g</p>
+          <p>Cholesterol: 30mg</p>
+          <p>Sugar: 56g</p>
+          <p>Protein: 4g</p>
+          <button onclick = "hideFonduePopup()">Close</button>
+        </div>
+  
+        <script>
+          function showFonduePopup() {
+            document.getElementById('fondue-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+  
+          function hideFonduePopup() {
+            document.getElementById('fondue-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
+
+      <!--Lime Cheesecake-->
           <div class="menu-item">
             <img class="menu-item-image" src="limecheesecake.jpeg" alt="Lime Cheesecake">
             <div class="menu-item-text">
@@ -361,11 +649,33 @@
               </p>
               <br>
               <div class="menu-item-buttons">
-                  <button class="view-nutrition-button">Nutritional Information</button>
+                  <button class="view-nutrition-button" id="limecheesecake-nutrition" onclick="showLimeCheesecakePopup()">Nutritional Information</button>
                   <button class="add-to-order-button">Add to Order</button>
                 </div>
             </div>
           </div>
+
+        <div class = "nutritional-info-popup" id = "limecheesecake-popup">
+          <h3>Lime Cheesecake: Nutritional Info</h3>
+          <p>Calories: 1160g</p>
+          <p>Total Fats: 86g</p>
+          <p>Cholesterol: 470mg</p>
+          <p>Sugar: 74g</p>
+          <p>Protein: 13g</p>
+          <button onclick = "hideLimeCheesecakePopup()">Close</button>
+        </div>
+  
+        <script>
+          function showLimeCheesecakePopup() {
+            document.getElementById('limecheesecake-popup').style.display = 'block';
+            document.getElementById('bg-overlay').style.display = 'block';
+          }
+  
+          function hideLimeCheesecakePopup() {
+            document.getElementById('limecheesecake-popup').style.display = 'none';
+            document.getElementById('bg-overlay').style.display = 'none';
+          }
+        </script>
       </div>
 
     </div>
