@@ -127,7 +127,7 @@
         </style>
         
     </head>
-    
+ 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -227,6 +227,26 @@
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDZBjOjxLiCruxS2vJBfsLO225QtqclZRY",
+          authDomain: "reservations-66678.firebaseapp.com",
+          projectId: "reservations-66678",
+          storageBucket: "reservations-66678.appspot.com",
+          messagingSenderId: "783083275175",
+          appId: "1:783083275175:web:25b70a8be51544d0592c82"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
 
 <!-- Footer -->
 <footer class="footer">

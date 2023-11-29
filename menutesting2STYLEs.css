@@ -106,4 +106,22 @@
       height: 125px;
     }
   }
+
+.go-to-cart {
+    position: absolute;
+    top: 1em; /* Adjust the top position as needed */
+    right: 1em; /* Adjust the right position as needed */
+    padding: 10px 15px;
+    background-color: #4f2600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline for links */
+}
+
+.go-to-cart:hover {
+    background-color: #702f00;
+}
   
