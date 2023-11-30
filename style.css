@@ -1,3 +1,15 @@
+button {
+    background-color: #ff5858;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    font-weight: bold; 
+}
+
 /* Footer */
 .footer {
     background-color: #fff;
