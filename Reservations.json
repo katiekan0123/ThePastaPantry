@@ -1,0 +1,21 @@
+{ 
+  "customerdetails": [{
+    "number": "2", 
+    "date": "11/30/2023",
+    "time": "8:55 PM",
+    "location": "1230 Oakland St Unit 4, San Jose, California 95122",
+    "name": "Michelle",
+    "phoneNumber": "1234567890",
+    "email": "abcd@gmail.com",
+    "concerns": "No dairy"
+  }, {
+    "number": "5", 
+    "date": "12/20/2023",
+    "time": "12:00 PM",
+    "location": "1230 Oakland St Unit 4, San Jose, California 95122",
+    "name": "Jack",
+    "phoneNumber": "2345678901",
+    "email": "bcde@gmail.com",
+    "concerns": "No meat"
+  }] 
+}
