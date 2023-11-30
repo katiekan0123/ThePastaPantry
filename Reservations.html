@@ -103,7 +103,8 @@
             .time-slot.selected {
                 background-color: #e9ecef;
             }
-        
+
+            /* delete if not using popup confirmation*/
             .confirmation-message {
                 text-align: center;
                 font-weight: bold;
@@ -111,6 +112,42 @@
                 margin-top: 20px;
                 font-size: 20px;
             }
+
+            #popup-container {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            #overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            #popup-container h2 {
+                margin-top: 0;
+            }
+
+            #close-btn {
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            /**/
         
             .footer-container.shaded {
                 background-color: rgba(255, 255, 255, 0.9);
@@ -187,18 +224,48 @@
                 <label for="concerns">Additional Concerns/Requests (optional):</label>
                 <textarea class="form-control" id="concerns" rows="4" placeholder="E.g., Special dietary requests, allergies, or other concerns"></textarea>
             </div>
+            
+            <!-- Tried doing the popup message like the nutritional facts to say that we confirm their reservation but it doesnt show up, I think it's because of the 2 onclicks (send() and showPopup()) -->
+            <div id="popup-container">
+                <span id="close-btn" onclick="closePopup()">X</span>
+                <h2>Reservation Confirmed!</h2>
+                <p>Your reservation has been successfully made.</p>
+            </div>
+            
+            <div id="overlay" onclick="closePopup()"></div>
+            
+            <!-- I think the onclick="send()" helped make the firebase work-->
+            <button type="submit" onclick="send()" onclick="showPopup()">Make Reservation</button>
+            
+            <!-- JS for popup -->
+            <script>
+                function showPopup() {
+                    document.getElementById("popup-container").style.display = "block";
+                    document.getElementById("overlay").style.display = "block";
+                }
+            
+                function closePopup() {
+                    document.getElementById("popup-container").style.display = "none";
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
             <button type="submit">Check Availability</button>
         </form>
     </div>
 
     <!-- Time Slots (These can be dynamically generated based on availability) -->
-    <div class="time-slots">
+    <!-- <div class="time-slots"> -->
         <!-- Time Slots will be dynamically generated here -->
-    </div>
-
+    <!--</div> -->
+    
     <!-- Confirmation Message -->
-    <div class="confirmation-message" id="confirmationMessage"></div>
+    <!-- <div class="confirmation-message" id="confirmationMessage"></div> -->
 
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="Reservations.js"></script>
+<!--
     <script>
         // Add interactivity for selecting a time slot
         const timeSlots = document.querySelectorAll('.time-slot');
@@ -223,6 +290,7 @@
             }
         });
     </script>
+-->
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
